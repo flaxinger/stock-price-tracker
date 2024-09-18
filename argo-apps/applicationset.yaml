@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/flaxinger/stock-price-tracker
         revision: main
         directories:
-          - path: "argo-apps/*"
+          - path: "argo-apps/templates/stock-price-tracker/*"
   template:
     metadata:
       name: '{{path.basename}}'
