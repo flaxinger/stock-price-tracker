@@ -10,7 +10,7 @@ spec:
   hostPath:
     path: "/data/kafka/broker-0"
   capacity:
-    storage: 15Gi
+    storage: 8Gi
   persistentVolumeReclaimPolicy: Recycle
   claimRef:
     name: data-kafka-broker-0
@@ -30,7 +30,7 @@ spec:
   hostPath:
     path: "/data/kafka/broker-1"
   capacity:
-    storage: 15Gi
+    storage: 8Gi
   persistentVolumeReclaimPolicy: Recycle
   claimRef:
     name: data-kafka-broker-1
@@ -50,7 +50,7 @@ spec:
   hostPath:
     path: "/data/kafka/broker-2"
   capacity:
-    storage: 15Gi
+    storage: 8Gi
   persistentVolumeReclaimPolicy: Recycle
   claimRef:
     name: data-kafka-broker-2
