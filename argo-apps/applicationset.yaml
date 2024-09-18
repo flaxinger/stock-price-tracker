@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/flaxinger/stock-price-tracker
         revision: main
         directories:
-          - path: "argo-apps/templates/stock-price-tracker/*"
+          - path: "argo-apps/templates/*"
   template:
     metadata:
       name: '{{path.basename}}'
@@ -24,4 +24,4 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{index .path.segments 2}}'
+        namespace: stock-price-tracker
