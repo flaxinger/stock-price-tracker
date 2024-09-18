@@ -4,10 +4,10 @@ metadata:
   name: kafka
   namespace: argocd
 spec:
-  project: default
+  project: stock-price-tracker
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: stock-tracker
+    namespace: stock-price-tracker
   sources:
   - chart: kafka
     repoURL: https://charts.bitnami.com/bitnami

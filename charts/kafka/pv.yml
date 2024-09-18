@@ -14,7 +14,7 @@ spec:
   persistentVolumeReclaimPolicy: Recycle
   claimRef:
     name: data-kafka-broker-0
-    namespace: stock-tracker
+    namespace: stock-price-tracker
 
 ---
 
@@ -34,7 +34,7 @@ spec:
   persistentVolumeReclaimPolicy: Recycle
   claimRef:
     name: data-kafka-broker-1
-    namespace: stock-tracker
+    namespace: stock-price-tracker
 
 ---
 
@@ -54,7 +54,7 @@ spec:
   persistentVolumeReclaimPolicy: Recycle
   claimRef:
     name: data-kafka-broker-2
-    namespace: stock-tracker
+    namespace: stock-price-tracker
 
 ---
 
@@ -74,5 +74,5 @@ spec:
     storage: 8Gi
   claimRef:
     name: data-kafka-zookeeper-0
-    namespace: stock-tracker
+    namespace: stock-price-tracker
 
