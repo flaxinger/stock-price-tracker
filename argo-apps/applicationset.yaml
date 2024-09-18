@@ -5,7 +5,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/heumsi/helm-charts
+        repoURL: https://github.com/flaxinger/stock-price-tracker
         revision: main
         directories:
           - path: "argo-apps/*"
@@ -19,7 +19,7 @@ spec:
           prune: true
           selfHeal: true
       source:
-        repoURL: https://github.com/heumsi/helm-charts
+        repoURL: https://github.com/flaxinger/stock-price-tracker
         targetRevision: main
         path: '{{path}}'
       destination:
