@@ -119,7 +119,12 @@ config: ""
 existingConfigmap: ""
 ## @param extraConfig Additional configuration to be appended at the end of the generated Kafka configuration file.
 ##
-extraConfig: ""
+extraConfig: |
+  max.message.bytes = 1048576
+  offsets.topic.replication.factor = 1
+  default.replication.factor = 1
+  delete.topic.enable = true
+  auto.create.topics.enable = false
 ## @param extraConfigYaml Additional configuration in yaml format to be appended at the end of the generated Kafka configuration file.
 ##
 ## E.g.
