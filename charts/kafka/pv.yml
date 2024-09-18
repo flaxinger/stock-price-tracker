@@ -48,7 +48,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/data/kafka/broker-1"
+    path: "/data/kafka/broker-2"
   capacity:
     storage: 15Gi
   persistentVolumeReclaimPolicy: Recycle
