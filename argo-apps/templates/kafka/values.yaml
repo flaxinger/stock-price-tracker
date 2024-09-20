@@ -6,10 +6,6 @@ kafka:
     replicaCount: 0
     resourcesPreset: large
   externalAccess:
-    autoDiscovery:
-      enabled: true
-      image:
-        tag: 1.30.3-debian-12-r0
     enabled: true
   extraConfig: |
     max.message.bytes = 1048576
@@ -17,9 +13,6 @@ kafka:
     default.replication.factor = 1
     delete.topic.enable = true
     auto.create.topics.enable = false
-
-  image:
-    tag: 3.7.1-debian-12-r2
   kraft:
     enabled: false
   listeners:
@@ -31,16 +24,10 @@ kafka:
       protocol: PLAINTEXT
     interbroker:
       protocol: PLAINTEXT
-  metrics:
-    jmx:
-      image:
-        tag: 1.0.1-debian-12-r2
   rbac:
     create: true
   volumePermissions:
     enabled: true
-    image:
-      tag: 12-debian-12-r25
   zookeeper:
     enabled: true
 
