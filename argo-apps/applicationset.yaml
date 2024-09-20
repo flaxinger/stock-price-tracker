@@ -22,9 +22,6 @@ spec:
         repoURL: https://github.com/flaxinger/stock-price-tracker
         targetRevision: main
         path: '{{path}}'
-        helm:
-          valueFiles:
-          - ./values.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: stock-price-tracker
