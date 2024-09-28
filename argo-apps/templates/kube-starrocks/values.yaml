@@ -28,4 +28,3 @@ kube-starrocks:
       storageSpec:
         name: starrocks-fe
     timeZone: Asia/Seoul
-
