@@ -1,12 +1,10 @@
 kafka-ui:
-  env: null
   envs:
   │ config:
   │ │ DYNAMIC_CONFIG_ENABLED: true
   │ │ SERVER_SERVLET_CONTEXT_PATH:
   networkPolicy:
   │ enabled: true
-  nodeSelector: null
   service:
   │ type: LoadBalancer
   yamlApplicationConfig:
