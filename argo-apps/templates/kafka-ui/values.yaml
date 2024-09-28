@@ -1,21 +1,21 @@
 kafka-ui:
   envs:
-  │ config:
-  │ │ DYNAMIC_CONFIG_ENABLED: true
-  │ │ SERVER_SERVLET_CONTEXT_PATH: ""
+    config:
+      DYNAMIC_CONFIG_ENABLED: true
+      SERVER_SERVLET_CONTEXT_PATH: ""
   networkPolicy:
-  │ enabled: true
+    enabled: true
   service:
-  │ type: LoadBalancer
+    type: LoadBalancer
   yamlApplicationConfig:
-  │ auth:
-  │ │ type: disabled
-  │ kafka:
-  │ │ clusters:
-  │ │ - bootstrapServers: "kafka-broker-0.kafka-broker-headless.stock-price-tracker.svc.cluster.local:9092,kafka-broker-1.kafka-broker-headless.stock-price-tracker.svc.cluster.local:9092"
-  │ │ │ name: stock-price-tracker
-  │ │ │ schemaRegistry: "http://schema-registry-headless.stock-price-tracker.svc.cluster.local:8081"
-  │ management:
-  │ │ health:
-  │ │ │ ldap:
-  │ │ │ │ enabled: false
+    auth:
+      type: disabled
+    kafka:
+      clusters:
+      - bootstrapServers: "kafka-broker-0.kafka-broker-headless.stock-price-tracker.svc.cluster.local:9092,kafka-broker-1.kafka-broker-headless.stock-price-tracker.svc.cluster.local:9092"
+        name: stock-price-tracker
+        schemaRegistry: "http://schema-registry-headless.stock-price-tracker.svc.cluster.local:8081"
+    management:
+      health:
+        ldap:
+          enabled: false
