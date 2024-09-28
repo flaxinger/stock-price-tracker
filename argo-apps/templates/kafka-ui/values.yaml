@@ -1,7 +1,7 @@
 kafka-ui:
   envs:
     config:
-      DYNAMIC_CONFIG_ENABLED: true
+      DYNAMIC_CONFIG_ENABLED: "true"
       SERVER_SERVLET_CONTEXT_PATH:
   networkPolicy:
     enabled: true
