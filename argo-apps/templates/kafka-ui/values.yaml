@@ -1,4 +1,6 @@
 kafka-ui:
+  nodeSelector:
+    kubernetes.io/arch: amd64
   envs:
     config:
       DYNAMIC_CONFIG_ENABLED: "true"
