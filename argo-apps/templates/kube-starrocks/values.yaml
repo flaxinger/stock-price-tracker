@@ -1,0 +1,31 @@
+kube-starrocks:
+  operator:
+    starrocksOperator:
+      nodeSelector:
+        kubernetes.io/arch: arm64
+    timeZone: Asia/Seoul
+  starrocks:
+    metrics:
+      serviceMonitor:
+        enabled: true
+    starrocksBeSpec:
+      storageSpec:
+        logStorageSize: 10Gi
+        name: starrocks-be
+        storageSize: 50Gi
+    starrocksCluster:
+      componentValues:
+        nodeSelector:
+          kubernetes.io/arch: arm64
+    starrocksFESpec:
+      resources:
+        limits:
+          cpu: 2
+          memory: 2Gi
+        requests:
+          cpu: 2
+          memory: 2Gi
+      storageSpec:
+        name: starrocks-fe
+    timeZone: Asia/Seoul
+
