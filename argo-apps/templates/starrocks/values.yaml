@@ -1,4 +1,4 @@
-
+starrocks:
   metrics:
     serviceMonitor:
       enabled: true
