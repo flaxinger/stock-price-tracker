@@ -1,7 +1,7 @@
-starrocks:
-#  metrics:
-#    serviceMonitor:
-#      enabled: true
+kube-starrocks:
+  metrics:
+    serviceMonitor:
+      enabled: true
   starrocksBeSpec:
     storageSpec:
       logStorageSize: 10Gi
