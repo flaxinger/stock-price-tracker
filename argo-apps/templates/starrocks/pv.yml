@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: starrocks-fe-meta
+  labels:
+    app: starrocks-fe-meta
+spec:
+  accessModes:
+  - ReadWriteOnce
+  hostPath:
+    path: "/data/starrocks/fe-meta"
+  capacity:
+    storage: 10Gi
+  persistentVolumeReclaimPolicy: Recycle
+  claimRef:
+    name: starrocks-fe-meta-kube-starrocks-fe-0
+    namespace: stock-price-tracker
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: starrocks-fe-log
+  labels:
+    app: starrocks-fe-log
+spec:
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/starrocks/fe-log"
+  capacity:
+    storage: 5Gi
+  persistentVolumeReclaimPolicy: Recycle
+  claimRef:
+    name: starrocks-fe-log-kube-starrocks-fe-0
+    namespace: stock-price-tracker
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: starrocks-be-log
+  labels:
+    app: starrocks-be-log
+spec:
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/starrocks/be-log"
+  capacity:
+    storage: 10Gi
+  persistentVolumeReclaimPolicy: Recycle
+  claimRef:
+    name: starrocks-be-log-kube-starrocks-be-0
+    namespace: stock-price-tracker
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: starrocks-be-data
+  labels:
+    app: starrocks-be-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/starrocks/be-data"
+  capacity:
+    storage: 50Gi
+  persistentVolumeReclaimPolicy: Recycle
+  claimRef:
+    name: starrocks-be-data-kube-starrocks-be-0
+    namespace: stock-price-tracker
