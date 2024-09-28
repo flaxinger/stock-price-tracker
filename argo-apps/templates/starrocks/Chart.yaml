@@ -3,6 +3,6 @@ appVersion: 3.7.0
 name: kafka-ui
 version: 0.0.1
 dependencies:
-- name: starrocks
+- name: kube-starrocks
   repository: https://starrocks.github.io/starrocks-kubernetes-operator
   version: 1.9.8
