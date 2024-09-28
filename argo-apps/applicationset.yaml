@@ -23,7 +23,7 @@ spec:
         targetRevision: main
         path: '{{path}}'
         helm:
-          valuesFiles:
+          valueFiles:
           - "values.yaml"
       destination:
         server: https://kubernetes.default.svc
