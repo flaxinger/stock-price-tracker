@@ -1,0 +1,8 @@
+apiVersion: v2
+appVersion: 3.7.0
+name: kafka
+version: 0.0.1
+dependencies:
+- name: kafka-ui
+  repository: oci://registry-1.docker.io/bitnamicharts
+  version: 29.3.10
