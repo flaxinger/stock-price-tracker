@@ -1,0 +1,25 @@
+
+  metrics:
+    serviceMonitor:
+      enabled: true
+  starrocksBeSpec:
+    storageSpec:
+      logStorageSize: 10Gi
+      name: starrocks-be
+      storageSize: 50Gi
+  starrocksCluster:
+    componentValues:
+      nodeSelector:
+        kubernetes.io/arch: arm64
+  starrocksFESpec:
+    resources:
+      limits:
+        cpu: 4
+        memory: 4Gi
+      requests:
+        cpu: 2
+        memory: 2Gi
+    storageSpec:
+      name: starrocks-fe
+  timeZone: Asia/Seoul
+
