@@ -6,7 +6,7 @@ kube-starrocks:
       log:
         - --zap-time-encoding=iso8601
         - --zap-encoder=console
-        - --zap-log-level 4
+        - --zap-log-level=4
     timeZone: Asia/Seoul
   starrocks:
 #    metrics:
