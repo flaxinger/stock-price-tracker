@@ -3,15 +3,14 @@ kube-starrocks:
     starrocksOperator:
       nodeSelector:
         kubernetes.io/arch: arm64
-      log:
-        - --zap-time-encoding=iso8601
-        - --zap-encoder=console
     timeZone: Asia/Seoul
   starrocks:
     metrics:
       serviceMonitor:
         enabled: true
     starrocksBeSpec:
+      service:
+        type: LoadBalancer
       storageSpec:
         logStorageSize: 10Gi
         name: starrocks-be
@@ -28,6 +27,8 @@ kube-starrocks:
         requests:
           cpu: 2
           memory: 2Gi
+      service:
+        type: LoadBalancer
       storageSpec:
         name: starrocks-fe
     timeZone: Asia/Seoul
