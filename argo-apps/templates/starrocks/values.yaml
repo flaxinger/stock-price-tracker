@@ -3,6 +3,10 @@ kube-starrocks:
     starrocksOperator:
       nodeSelector:
         kubernetes.io/arch: arm64
+      log:
+        - --zap-time-encoding=iso8601
+        - --zap-encoder=console
+        - --zap-log-level 4
     timeZone: Asia/Seoul
   starrocks:
 #    metrics:
@@ -28,3 +32,4 @@ kube-starrocks:
       storageSpec:
         name: starrocks-fe
     timeZone: Asia/Seoul
+
