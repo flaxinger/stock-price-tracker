@@ -6,12 +6,11 @@ kube-starrocks:
       log:
         - --zap-time-encoding=iso8601
         - --zap-encoder=console
-        - --zap-log-level=4
     timeZone: Asia/Seoul
   starrocks:
-#    metrics:
-#      serviceMonitor:
-#        enabled: true
+    metrics:
+      serviceMonitor:
+        enabled: true
     starrocksBeSpec:
       storageSpec:
         logStorageSize: 10Gi
