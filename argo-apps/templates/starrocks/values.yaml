@@ -5,9 +5,9 @@ kube-starrocks:
         kubernetes.io/arch: arm64
     timeZone: Asia/Seoul
   starrocks:
-    metrics:
-      serviceMonitor:
-        enabled: true
+#    metrics:
+#      serviceMonitor:
+#        enabled: true
     starrocksBeSpec:
       storageSpec:
         logStorageSize: 10Gi
